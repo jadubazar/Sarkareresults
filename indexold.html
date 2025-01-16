@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सरकारी रिजल्ट</title>
+    <script>
+        function checkRollNumber() {
+            let rollNo = document.getElementById("rollNo").value;
+            let dob = document.getElementById("dob").value;
+            
+            // सही रोल नंबर और DOB की चेकिंग
+            if (rollNo === "00862808" && dob === "05-09-2004") { 
+                window.location.href = "result.html"; // फेक रिजल्ट पेज पर ले जाए
+            } else {
+                alert("❌ गलत रोल नंबर या जन्मतिथि! कृपया सही जानकारी डालें।");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center; color: blue;">सरकारी रिजल्ट पोर्टल</h1>
+    <p style="text-align: center;">अपना रोल नंबर और जन्मतिथि डालें:</p>
+    
+    <div style="text-align: center; margin-top: 20px;">
+        <label for="rollNo">रोल नंबर:</label>
+        <input type="text" id="rollNo" placeholder="रोल नंबर डालें" required><br><br>
+        
+        <label for="dob">जन्मतिथि:</label>
+        <input type="text" id="dob" placeholder="जन्मतिथि (DD-MM-YYYY)" required><br><br>
+        
+        <button onclick="checkRollNumber()">सबमिट करें</button>
+    </div>
+
+</body></html>
